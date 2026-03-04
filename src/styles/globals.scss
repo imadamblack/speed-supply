@@ -49,7 +49,7 @@ button, .button {
   hover:bg-brand-2 hover:text-white;
   &-secondary {
     @extend .button;
-    @apply bg-transparent border border-brand-1 hover:bg-transparent text-brand-1 hover:text-brand-1;
+    @apply bg-transparent border border-brand-2 hover:bg-transparent text-brand-2 hover:text-brand-1;
   }
   &[type] {
     @extend .button;

@@ -58,7 +58,7 @@ export default function Index({lead, utm}) {
           <Image src="/landing/hero.avif" layout="fill" className="object-cover object-center"/>
         </div>
 
-        <div className="container md:text-white mx-auto z-20 mt-12">
+        <div className="container md:text-white mx-auto z-20 my-12">
           <h1
             className="lg:w-2/3 mx-auto relative ft-10 leading-none text-center md:[text-shadow:_2px_2px_0_rgb(0_0_0_/_40%)]"
             dangerouslySetInnerHTML={{__html: hero.banner.title}}
@@ -69,7 +69,7 @@ export default function Index({lead, utm}) {
           />
         </div>
 
-        <CtaButton origin="hero"/>
+        {/*<CtaButton origin="hero"/>*/}
 
       </section>
 
@@ -131,13 +131,9 @@ export default function Index({lead, utm}) {
             {beneficios.content.items.map((i, idx) =>
               <div
                 id={`beneficio-${idx}`}
-                className="relative flex flex-col gap-8 w-full bg-white rounded-2xl shadow-lg overflow-hidden border border-neutral-100">
-
-                <div className="p-20">
+                className="relative flex flex-col w-full bg-white rounded-2xl shadow-lg overflow-hidden border border-neutral-100 p-20">
                   <h3 className="ft-6 font-semibold flex-grow">{i.title}</h3>
                   <p className="ft-1 mt-8" dangerouslySetInnerHTML={{__html: i.description}}/>
-                </div>
-
               </div>,
             )}
           </div>

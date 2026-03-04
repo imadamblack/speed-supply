@@ -2,7 +2,7 @@ export const content = {
   hero: {
     banner: {
       title: 'Si vendes ATV o UTV, tu inventario de llantas no puede depender de la suerte',
-      description: 'Importador directo de llantas ATV y UTV con stock real en México, estructura de precio clara y venta flexible desde 1 pieza',
+      description: 'Importador directo de llantas ATV y UTV con stock real, envíos exprés en México y venta flexible desde 1 pieza',
     },
     content: {
       paragraph: 'Te vendemos desde 1 pieza, sin obligarte a comprar el juego completo y sin inflar precios por intermediarios.',
@@ -65,7 +65,7 @@ export const content = {
   },
   beneficios: {
     banner: {
-      title: '¿Por qué sí importa dónde comprar las llantas para tu vehículo ATV y UTV?',
+      title: 'Claro que importa dónde comprar las llantas para tus vehículos',
       description: 'Cuando vas a comprar llantas para vehículos todo terreno, importa con quién y por qué.',
     },
     content: {

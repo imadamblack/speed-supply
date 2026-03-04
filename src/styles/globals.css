@@ -414,7 +414,7 @@ button, .button, button[type], .button[type], button-secondary[type], [type].but
   hover:bg-brand-2 hover:text-white;
 }
 button-secondary, .button-secondary {
-  @apply bg-transparent border border-brand-1 hover:bg-transparent text-brand-1 hover:text-brand-1;
+  @apply bg-transparent border border-brand-2 hover:bg-transparent text-brand-2 hover:text-brand-1;
 }
 .text-block {
   @apply xl:w-1/2;
