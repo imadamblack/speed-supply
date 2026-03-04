@@ -84,11 +84,11 @@ export default function Index({lead, utm}) {
                 {catalogo.content.items.map((i) =>
                   <div
                     onClick={() => setCatalogoItem(i.title)}
-                    className="relative flex-grow cursor-pointer"
+                    className="relative h-[6rem] flex-grow items-center justify-center cursor-pointer"
                   >
+                    <p className="absolute top-[1.5rem] inset-x-0 text-center ft-8 serif font-bold tracking-wide z-40">{i.title}</p>
                     <div
                       className={`${i.title !== catalogoItem && 'hidden'} absolute inset-0 bg-white/30 rounded-2xl shadow-md`}/>
-                    <p className="font-bold text-center tracking-wide px-8 py-4">{i.title}</p>
                   </div>,
                 )}
               </div>
@@ -96,13 +96,17 @@ export default function Index({lead, utm}) {
               <div className="mt-8 mx-8 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8 items-stretch">
                 {catalogo.content.items.find((i) => i.title === catalogoItem)
                   .items.map(item =>
-                    <div className="relative flex flex-col w-full gap-4">
-                      <div>
+                    <div className="relative flex flex-col w-full">
+
                         <div className="relative w-full aspect-square overflow-hidden">
                           <Image src={`/landing/catalogo/${item.img}`} layout="fill" objectFit="contain"/>
                         </div>
-                        <h3 className="ft-9 text-center mt-4">{item.title}</h3>
-                      </div>
+
+                        <div className="relative flex flex-col">
+                          <h3 className="ft-9 text-center">{item.title}</h3>
+                          <p className="ft-2 text-center" dangerouslySetInnerHTML={{__html: item.description}}/>
+                        </div>
+
                     </div>,
                   )}
               </div>

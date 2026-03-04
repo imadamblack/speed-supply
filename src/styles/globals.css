@@ -267,6 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "HemiHead", sans-serif;
   letter-spacing: normal; /* Equivalente a tracking-normal */
   margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 h1, h2, h3 {

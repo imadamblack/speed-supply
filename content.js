@@ -24,18 +24,38 @@ export const content = {
         {
           title: 'ATV',
           items: [
-            {title: 'Total XT', img: '0-2.avif'},
-            {title: 'Master XR', img: '0-1.avif'},
-          ]
+            {
+              title: 'Total XT',
+              img: '0-2.avif',
+              description: `6 capas<br/>Profundidad de banda: 15mm`,
+            },
+            {
+              title: 'Master XR',
+              img: '0-1.avif',
+              description: `6 capas<br/>Profundidad de banda: 20mm`,
+            },
+          ],
         },
         {
           title: 'UTV',
           items: [
-            {title: 'Speed RS', img: '1-3.avif'},
-            {title: 'Speed PRO', img: '1-1.avif'},
-            {title: 'Speed Master', img: '1-2.avif'},
-          ]
-        }
+            {
+              title: 'Speed RS',
+              img: '1-3.avif',
+              description: `8 capas<br/>Profundidad de banda: 15mm`
+            },
+            {
+              title: 'Speed PRO',
+              img: '1-1.avif',
+              description: `8 capas<br/>Profundidad de banda: 15mm`
+            },
+            {
+              title: 'Speed Master',
+              img: '1-2.avif',
+              description: `10 capas<br/>Profundidad de banda: 15mm`
+            },
+          ],
+        },
       ],
     },
     cta: {
@@ -46,7 +66,7 @@ export const content = {
   beneficios: {
     banner: {
       title: '¿Por qué sí importa dónde comprar las llantas para tu vehículo ATV y UTV?',
-      description: 'Cuando vas a comprar llantas para vehículos todo terreno, importa con quién y por qué.'
+      description: 'Cuando vas a comprar llantas para vehículos todo terreno, importa con quién y por qué.',
     },
     content: {
       paragraph: null,

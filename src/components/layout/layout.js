@@ -38,7 +38,7 @@ export default function Layout({children}) {
       <Head>
         <title>{info.companyName} | {info.description}</title>
         <meta name="description" content={info.description}/>
-        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="icon" type="image/png" href="icon.avif"/>
       </Head>
       {header && <Header/>}
 
