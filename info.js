@@ -23,7 +23,7 @@ export const info = {
     city: "Guadalajara",
     state: "JAL",
   },
-  optInWebhook: '',
+  optInWebhook: 'https://n8n.notoriovs.com/webhook/5b80a6e7-3291-41db-aa09-7f511a581973',
   surveyWebhook: '',
   surveyRedirect: '',
   privacyNotice: "/aviso-privacidad",
