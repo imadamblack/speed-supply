@@ -1,7 +1,7 @@
 export const content = {
   hero: {
     banner: {
-      title: 'Si vendes ATV o UTV, tu inventario de llantas no puede depender de la suerte',
+      title: 'Vendes productos para ATV o UTV, tu inventario de llantas no puede depender de la suerte',
       description: 'Importador directo de llantas ATV y UTV con stock real, envíos exprés en México y venta flexible desde 1 pieza',
     },
     content: {
@@ -22,21 +22,6 @@ export const content = {
       paragraph: 'Te surtimos con una selección curada de decoración contemporánea, pensada para rotar en punto de venta y funcionar perfecto en proyectos comerciales.',
       items: [
         {
-          title: 'ATV',
-          items: [
-            {
-              title: 'Total XT',
-              img: '0-2.avif',
-              description: `6 capas<br/>Profundidad de banda: 15mm`,
-            },
-            {
-              title: 'Master XR',
-              img: '0-1.avif',
-              description: `6 capas<br/>Profundidad de banda: 20mm`,
-            },
-          ],
-        },
-        {
           title: 'UTV',
           items: [
             {
@@ -53,6 +38,26 @@ export const content = {
               title: 'Speed Master',
               img: '1-2.avif',
               description: `10 capas<br/>Profundidad de banda: 15mm`
+            },
+            {
+              title: 'Banda',
+              img: '1-4.png ',
+              description: `XTreme Performance<br/>Banda para UTV`
+            },
+          ],
+        },
+        {
+          title: 'ATV',
+          items: [
+            {
+              title: 'Total XT',
+              img: '0-2.avif',
+              description: `6 capas<br/>Profundidad de banda: 15mm`,
+            },
+            {
+              title: 'Master XR',
+              img: '0-1.avif',
+              description: `6 capas<br/>Profundidad de banda: 20mm`,
             },
           ],
         },
