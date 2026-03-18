@@ -144,7 +144,11 @@ export default function OptInForm({lastClick = '', utm = {}}) {
       </form>
       <div className="mt-8 pt-8 border-t border-brand-2">
         <h3 className="sans">Buscas llantas para tus vehículos personales?</h3>
-        <a className="button-secondary mt-8 !w-full" href={`https://wa.me/${info.whatsapp.value}`}>
+        <a
+          className="button-secondary mt-8 !w-full"
+          onClick={fbEvent('Contact')}
+          href={`https://wa.me/${info.whatsapp.value}`}
+        >
           Da clic aquí
         </a>
       </div>
