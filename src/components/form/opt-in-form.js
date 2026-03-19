@@ -17,6 +17,7 @@ export default function OptInForm({lastClick = '', utm = {}}) {
     register,
     handleSubmit,
     formState: {errors},
+    watch,
   } = methods;
 
   const onSubmit = (data) => {
@@ -67,7 +68,35 @@ export default function OptInForm({lastClick = '', utm = {}}) {
       });
   };
 
-  console.log(errors);
+  const ConditionalInputs = () => {
+    if (watch('customerType') === 'distribuidor') {
+      return (
+        <input
+          {...register(
+            'company',
+            {required: true},
+          )}
+          className={errors.city && '!bg-red-200'}
+          placeholder="Nombre de tu negocio"/>
+      )
+    }
+
+    if (watch('customerType') === 'personal') {
+      return (
+        <Select
+          options={[
+            {value: 'utv', name: 'UVT'},
+            {value: 'atv', name: 'ATV'}
+          ]}
+          name="vehicleType"
+          inputOptions={{required: true}}
+          placeholder="Qué tipo de vehículo tienes?"
+          className={`rounded-md px-6 py-4 bg-white ${errors.state && '!bg-red-200'}`}
+        />
+      )
+    }
+
+  }
 
   return (
     <FormProvider {...methods}>
@@ -106,7 +135,7 @@ export default function OptInForm({lastClick = '', utm = {}}) {
           options={mexicanStates}
           name="state"
           inputOptions={{required: true}}
-          placeholder="Selecciona un estado"
+          placeholder="En qué estado de la república estás?"
           className={`rounded-md px-6 py-4 bg-white ${errors.state && '!bg-red-200'}`}
         />
 
@@ -118,13 +147,18 @@ export default function OptInForm({lastClick = '', utm = {}}) {
           className={errors.city && '!bg-red-200'}
           placeholder="Ciudad o localidad"/>
 
-        <input
-          {...register(
-            'company',
-            {required: true},
-          )}
-          className={errors.city && '!bg-red-200'}
-          placeholder="Nombre de tu negocio"/>
+        <Select
+          options={[
+            {value: 'distribuidor', name: 'Soy distribuidor'},
+            {value: 'personal', name: 'Para mi vehículo'}
+          ]}
+          name="customerType"
+          inputOptions={{required: true}}
+          placeholder="Buscas distribuir o para tu vehículo personal"
+          className={`rounded-md px-6 py-4 bg-white ${errors.state && '!bg-red-200'}`}
+        />
+
+        <ConditionalInputs />
 
         <button
           disabled={sending}
@@ -142,16 +176,6 @@ export default function OptInForm({lastClick = '', utm = {}}) {
         </div>
 
       </form>
-      <div className="mt-8 pt-8 border-t border-brand-2">
-        <h3 className="sans">Buscas llantas para tus vehículos personales?</h3>
-        <a
-          className="button-secondary mt-8 !w-full"
-          onClick={fbEvent('Contact')}
-          href={`https://wa.me/${info.whatsapp.value}`}
-        >
-          Da clic aquí
-        </a>
-      </div>
     </FormProvider>
 )
   ;

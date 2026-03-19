@@ -244,8 +244,8 @@ export const content = {
   },
   cta: {
     banner: {
-      title: 'Platiquemos y solicita condiciones de distribuidor',
-      description: 'Al solicitar una cotización te compartimos las políticas completas para que tengas claridad desde el inicio.',
+      title: 'Listo, mándanos un WhatsApp para cotizar tus llantas',
+      description: 'Regálanos unos datos para contactarte con un par de opciones de cotización',
     },
     content: {
       paragraph: null,
