@@ -9,7 +9,7 @@ import fbEvent, { gtagSendEvent } from '../../services/fbEvents';
 import { Select } from './formAtoms';
 import { mexicanStates } from '../../catalogs/mexican-states';
 
-export default function OptInForm({lastClick = '', utm = {}}) {
+export default function OptInForm({lastClick = '', utm = {}, distributor}) {
   const [sending, setSending] = useState(false);
   const router = useRouter();
   const methods = useForm({mode: 'all'});
@@ -17,7 +17,6 @@ export default function OptInForm({lastClick = '', utm = {}}) {
     register,
     handleSubmit,
     formState: {errors},
-    watch,
   } = methods;
 
   const onSubmit = (data) => {
@@ -28,7 +27,7 @@ export default function OptInForm({lastClick = '', utm = {}}) {
 
     const _fbc = getCookie('_fbc');
     const _fbp = getCookie('_fbp');
-    const payload = {...data, _fbc, _fbp, ...utm};
+    const payload = {...data, _fbc, _fbp, ...utm, type: distributor ? 'distribuidor' : 'personal'};
 
     fetch(info.optInWebhook, {
       method: 'POST',
@@ -69,7 +68,7 @@ export default function OptInForm({lastClick = '', utm = {}}) {
   };
 
   const ConditionalInputs = () => {
-    if (watch('customerType') === 'distribuidor') {
+    if (distributor) {
       return (
         <input
           {...register(
@@ -81,7 +80,7 @@ export default function OptInForm({lastClick = '', utm = {}}) {
       )
     }
 
-    if (watch('customerType') === 'personal') {
+    if (!distributor) {
       return (
         <Select
           options={[
@@ -146,17 +145,6 @@ export default function OptInForm({lastClick = '', utm = {}}) {
           )}
           className={errors.city && '!bg-red-200'}
           placeholder="Ciudad o localidad"/>
-
-        <Select
-          options={[
-            {value: 'distribuidor', name: 'Soy distribuidor'},
-            {value: 'personal', name: 'Para mi vehículo'}
-          ]}
-          name="customerType"
-          inputOptions={{required: true}}
-          placeholder="Buscas distribuir o para tu vehículo personal"
-          className={`rounded-md px-6 py-4 bg-white ${errors.state && '!bg-red-200'}`}
-        />
 
         <ConditionalInputs />
 

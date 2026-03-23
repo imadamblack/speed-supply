@@ -1,8 +1,8 @@
 export const content = {
   hero: {
     banner: {
-      title: 'Vendes productos para ATV o UTV, tu inventario de llantas no puede depender de la suerte',
-      description: 'Importador directo de llantas ATV y UTV con stock real, envíos exprés en México y venta flexible desde 1 pieza',
+      title: 'Las llantas que aguantan el terreno mexicano. Sin pagar un premium de marca.',
+      description: 'Importadores directos de llantas ATV y UTV. Stock real, precio justo, envío ese mismo día.',
     },
     content: {
       paragraph: 'Te vendemos desde 1 pieza, sin obligarte a comprar el juego completo y sin inflar precios por intermediarios.',
@@ -10,7 +10,7 @@ export const content = {
     },
     cta: {
       main: 'Cotiza hoy',
-      secondary: 'Solicita lista de precios de distribuidor<br/>Envíos exprés a todo México',
+      secondary: '¿Tienes una refaccionaria o tour de ATV? Solicita precios de distribuidor',
     },
   },
   catalogo: {
@@ -98,39 +98,9 @@ export const content = {
       secondary: null,
     },
   },
-  niveles: {
-    banner: {
-      title: 'Niveles del programa de Distribuidores',
-      description: null,
-    },
-    content: {
-      paragraph: null,
-      items: [
-        {
-          title: 'Estándar',
-          description: '— 50% de descuento sobre el Precio Regular<br/>— Compra inicial de activación: $20,000 MXN<br/>— Recompras sin monto mínimo<br/>— Atención personalizada<br/>— Acceso a promociones exclusivas<br/>— Precio de distribuidor 100% confidencial<br/>\n',
-          img: 'atributos01.jpg',
-        },
-        {
-          title: 'Preferente',
-          description: 'Todos los beneficios del Distribuidor Estándar más: <br/>— 5% de descuento adicional sobre el precio de lista una vez que acumules $50,000 MXN de compras en un periodo de 6 meses',
-          img: 'atributos02.jpg',
-        },
-        {
-          title: '100K',
-          description: 'Todos los beneficios del Distribuidor Estándar más: <br/>— 7% de descuento adicional sobre el precio de lista al realizar compras arriba de $100,000 MXN en una sola exhibición',
-          img: 'atributos03.jpg',
-        },
-      ],
-    },
-    cta: {
-      main: 'Conoce nuestro catálogo y cotiza',
-      secondary: null,
-    },
-  },
   atributos: {
     banner: {
-      title: 'Para vehículos todo terreno, llantas todo terreno',
+      title: 'No somos el más famoso. Somos el que cumple.',
       description: 'Nuestras llantas son la opción correcta tanto para uso profesional y recreativo porque aguantan todo terreno mexicano.',
     },
     content: {
@@ -211,29 +181,19 @@ export const content = {
       paragraph: null,
       items: [
         {
-          q: '¿Sí aguantan terreno pesado?',
-          a: 'Sí. Están diseñadas para terreno mexicano: piedra, lodo y uso exigente. Si me dices cómo las usas, te recomiendo el modelo correcto.',
+          q: '¿Hacen envíos a todo México? ',
+          a: 'Sí, a cualquier estado. El costo lo calculamos al cotizar según tu ubicación y cantidad.',
           img: 'faqs01.jpg',
         },
         {
-          q: '¿Cuánto tarda el envío?',
-          a: 'Depende de tu ciudad y cantidad. Si haces tu pedido antes del medio día, enviamos ese mismo día. Te damos el tiempo exacto al momento de cotizar.',
+          q: '¿Qué pasa si no sé qué medida necesito?',
+          a: 'Dinos el modelo de tu ATV/UTV o mándanos foto de la llanta actual. Te confirmamos la medida antes de cotizar.',
           img: 'faqs02.jpg',
         },
         {
-          q: '¿Tienen stock o es sobre pedido?',
-          a: 'Manejamos stock constante. Si algo no está disponible, te lo decimos claro desde el inicio.',
+          q: '¿Es confiable si no conozco la marca?',
+          a: 'Somos importadores directos con stock real. No vendemos lo que no tenemos y no cambiamos el precio después de cotizar.',
           img: 'faqs03.jpg',
-        },
-        {
-          q: '¿Sirven para competencia o solo recreativo?',
-          a: 'Ambos. Te sirven para rutas recreativas y para uso competitivo más exigente.',
-          img: 'faqs04.jpg',
-        },
-        {
-          q: '¿Cómo sé qué medida necesito?',
-          a: 'Si no estás seguro, dinos el modelo de tu ATV / UTV o mándanos foto de tu llanta actual. Te ayudamos a confirmar la medida correcta antes de cotizar.',
-          img: 'faqs05.jpg',
         },
       ],
     },
@@ -244,8 +204,8 @@ export const content = {
   },
   cta: {
     banner: {
-      title: 'Listo, mándanos un WhatsApp para cotizar tus llantas',
-      description: 'Regálanos unos datos para contactarte con un par de opciones de cotización',
+      title: 'Cotiza tus nuevas llantas en minutos',
+      description: 'Dinos qué necesitas y te mandamos opciones directo a tu WhatsApp. Sin formularios largos, sin esperar días.',
     },
     content: {
       paragraph: null,
