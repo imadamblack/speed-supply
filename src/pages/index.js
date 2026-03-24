@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { content } from '../../content';
+import {info} from '/info'
 
 import OptInForm from '../components/form/opt-in-form';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Index({lead, utm}) {
   const [lastClick, setLastClick] = useState('');
-  const [isDistributor, setIsDistributor] = useState(false);
+  const [isDistributor, setIsDistributor] = useState(true);
   const [catalogoItem, setCatalogoItem] = useState('UTV');
 
   useEffect(() => {
@@ -30,12 +31,17 @@ export default function Index({lead, utm}) {
   const {hero, beneficios, alianzas, atributos, catalogo, garantias, testimonios, faqs, cta} = content;
 
   const CtaButton = ({origin}) => (
-    <div className="reading-container z-20">
+    <div className="reading-container mb-12 z-20">
       <div>
-        <Link href="/#contact">
-          <a onClick={() => goToContact(origin)} className="button !w-full">{hero.cta.main}</a>
-        </Link>
-        <p className="text-center">
+
+        <a
+          href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+          className="button !w-full"
+          target="_blank"
+        >
+          {hero.cta.main}
+        </a>
+        <p className="ft-1 mt-4 text-center">
           {hero.cta.secondary} {' '}
           <a href="/#contact" onClick={() => setIsDistributor(true)} className="link">da click aquí</a>
         </p>
@@ -254,12 +260,12 @@ export default function Index({lead, utm}) {
       className="sticky inset-x-0 bottom-4 mb-12 px-8 z-[99]">
       <div className="flex justify-center">
         <a
-          onClick={() => goToContact('float')}
+          href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
           target="_blank"
           className="ft-3 button cursor-pointer hover:bg-brand-5 !mt-0 !py-6 !px-16 !rounded-full shadow-lg !tracking-normal"
         >
           <span className="filter invert mr-4"><Image src="/whatsapp.svg" width={24} height={24}/></span>
-          Habla con nosotros
+          Cotiza tus llantas
         </a>
       </div>
     </div>
@@ -286,10 +292,6 @@ export default function Index({lead, utm}) {
           </h2>
           <div className="my-12">
             <p className="ft-1 text-neutral-900" dangerouslySetInnerHTML={{__html: cta.banner.description}}/>
-            <p className="ft-1 text-neutral-900">
-              {isDistributor ? 'Si es para tu vehículo personal' : hero.cta.secondary} {' '}
-              <a onClick={() => setIsDistributor(!isDistributor)} className="link">da click aquí</a>
-            </p>
           </div>
           <AnimatePresence mode="wait">
             <motion.div
@@ -302,7 +304,7 @@ export default function Index({lead, utm}) {
               <OptInForm
                 lastClick={lastClick}
                 utm={utm}
-                distributor={isDistributor}
+                distributor={true}
               />
             </motion.div>
           </AnimatePresence>

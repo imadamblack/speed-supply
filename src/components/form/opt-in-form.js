@@ -84,7 +84,7 @@ export default function OptInForm({lastClick = '', utm = {}, distributor}) {
       return (
         <Select
           options={[
-            {value: 'utv', name: 'UVT'},
+            {value: 'utv', name: 'UTV'},
             {value: 'atv', name: 'ATV'}
           ]}
           name="vehicleType"
@@ -94,7 +94,6 @@ export default function OptInForm({lastClick = '', utm = {}, distributor}) {
         />
       )
     }
-
   }
 
   return (

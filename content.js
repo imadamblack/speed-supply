@@ -204,8 +204,8 @@ export const content = {
   },
   cta: {
     banner: {
-      title: 'Cotiza tus nuevas llantas en minutos',
-      description: 'Dinos qué necesitas y te mandamos opciones directo a tu WhatsApp. Sin formularios largos, sin esperar días.',
+      title: 'Te interesa distribuir Speed Supply?',
+      description: 'Déjanos unos datos y te mandamos opciones directo a tu WhatsApp. Sin sin esperar días.',
     },
     content: {
       paragraph: null,
