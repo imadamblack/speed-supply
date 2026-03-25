@@ -15,7 +15,7 @@ export default function ThankYou() {
         <div className="flex flex-col items-center justify-center gap-10">
           <a
             className="ft-2 py-3 px-6 rounded-lg items-center  bg-green-500 hover:bg-green-600 transition-all hover:scale-105"
-            onClick={fbEvent('Contact')}
+            onClick={() => fbEvent('Contact')}
             href={`https://wa.me/${info.whatsapp.value}`}
           >
             <p className="text-white">

@@ -4,11 +4,11 @@ import { content } from '../../content';
 import {info} from '/info'
 
 import OptInForm from '../components/form/opt-in-form';
-import Link from 'next/link';
 import Blockbuster from '../components/blockbuster';
 import Faqs from '../components/faqs';
 import scrollDepth from '../utils/scrollDepth';
 import { motion, AnimatePresence } from 'framer-motion';
+import fbEvent from '../services/fbEvents';
 
 export default function Index({lead, utm}) {
   const [lastClick, setLastClick] = useState('');
@@ -20,7 +20,7 @@ export default function Index({lead, utm}) {
       values: [25, 50, 75, 100],
       callback: (value) => fbq('trackCustom', `Scroll Depth: ${value}`),
     });
-  });
+  }, []);
 
   const goToContact = (origin) => {
     setLastClick(origin);
@@ -38,6 +38,7 @@ export default function Index({lead, utm}) {
           href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
           className="button !w-full"
           target="_blank"
+          onClick={() => fbEvent('Contact')}
         >
           {hero.cta.main}
         </a>
@@ -261,6 +262,7 @@ export default function Index({lead, utm}) {
       <div className="flex justify-center">
         <a
           href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+          onClick={() => fbEvent('Contact')}
           target="_blank"
           className="ft-3 button cursor-pointer hover:bg-brand-5 !mt-0 !py-6 !px-16 !rounded-full shadow-lg !tracking-normal"
         >

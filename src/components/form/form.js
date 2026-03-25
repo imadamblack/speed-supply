@@ -32,7 +32,7 @@ export default function Form() {
       })
         .then((result) => result)
         .then((res) => res)
-        .then(fbEvent('Lead', data))
+        .then(() => fbEvent('Lead', data))
         .then(() => {
           setAwaiting(false);
           router.push('/thankyou');

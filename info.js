@@ -9,8 +9,8 @@ export const info = {
   },
   phoneNumber: "+523314608422",
   whatsapp: {
-    value: "+523314608422",
-    message: "Buen día, quiero cotizar unas llantas",
+    value: "523314608422",
+    message: encodeURI("Buen día, quiero cotizar unas llantas"),
   },
   social: {
     facebook: "",
