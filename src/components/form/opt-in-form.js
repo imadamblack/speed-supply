@@ -129,6 +129,7 @@ export default function OptInForm({lastClick = '', utm = {}, distributor}) {
           className={errors.phone && '!bg-red-200'}
           onKeyDown={restrictNumber}
           placeholder="Numero de WhatsApp"/>
+
         <Select
           options={mexicanStates}
           name="state"
@@ -145,7 +146,13 @@ export default function OptInForm({lastClick = '', utm = {}, distributor}) {
           className={errors.city && '!bg-red-200'}
           placeholder="Ciudad o localidad"/>
 
-        <ConditionalInputs />
+        <input
+          {...register(
+            'company',
+            {required: true},
+          )}
+          className={errors.company && '!bg-red-200'}
+          placeholder="Nombre de tu negocio"/>
 
         <button
           disabled={sending}
@@ -157,7 +164,7 @@ export default function OptInForm({lastClick = '', utm = {}, distributor}) {
         }</button>
 
         <div className="mt-4">
-          <p className="-ft-3 text-center">No compartiremos tus datos. Al dar clic aceptas nuestra&nbsp;
+          <p className="-ft-3 text-center text-neutral-400">No compartiremos tus datos. Al dar clic aceptas nuestra&nbsp;
             <Link href={info.privacyNotice}>política de privacidad</Link>.
           </p>
         </div>

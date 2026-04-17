@@ -506,11 +506,22 @@ ol > li {
 }
 
 .overhead {
-  @apply relative uppercase tracking-widest px-4 py-2 text-white  bg-brand-2 w-max rounded-lg mb-8;
+  @apply relative uppercase tracking-widest px-4 py-2 text-brand-2  bg-brand-1 w-max rounded-lg mb-8;
 }
 
 .reading-container {
   @apply flex flex-col w-full max-w-[40ch] ft-2 p-8 mx-auto space-y-12;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=globals.css.map */

@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 px-8 py-4 bg-white backdrop-blur-sm w-screen shadow-lg ${path === '/survey' ? 'h-[4rem]' : 'h-[6rem]'} flex justify-center z-[999] hover:top-0`}
+        className={`top-0 px-8 py-4 bg-white backdrop-blur-sm w-screen shadow-lg ${path === '/survey' ? 'h-[4rem]' : 'h-[6rem]'} flex justify-center z-[999] hover:top-0`}
       >
         <div className="relative flex items-center w-full">
           <Link href="/" passhref>
@@ -25,11 +25,11 @@ export default function Header() {
           </Link>
         </div>
       </header>
-      {/*<div className="bg-red-500 w-full text-white p-4 sticky top-0 z-40">*/}
-      {/*  <p className="-ft-2 font-semibold text-center">Solo en {new Date().toLocaleString('es-ES', {month: 'long'})}:*/}
-      {/*    Envío*/}
-      {/*    GRATIS en tu primera compra desde $20,000*</p>*/}
-      {/*</div>*/}
+      <div className="bg-brand-1 w-full text-brand-2 p-4 sticky top-0 z-40">
+        <p className="-ft-2 font-semibold text-center">
+          Envío 24HRS Gratis en tu primera compra desde $20,000*
+        </p>
+      </div>
     </>
   )
     ;
